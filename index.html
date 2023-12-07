@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+    <title>Cesta z Bratislavy</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 id="heading">Cesta z Bratislavy</h1>
+            <div class="signHolder">
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <div id="train">
+            <img id="locomotive" class="carriage" src="./lokomotiva.png" onclick="moveTrain(1)">
+            <img class="carriage" src="./vozen.png" onclick="moveTrain(2)">
+            <img class="carriage" src="./vozen.png" onclick="moveTrain(3)">
+            <img class=" carriage" src="./vozen.png" onclick="moveTrain(4)">
+            <img class=" carriage" src="./vozen.png" onclick="moveTrain(5)">
+        </div>
+        <div id="railway">
+        </div>
+        <div id="map">
+        </div>
+    </main>
+    <article class="carriageContent contentHidden contentSmall" onclick="contentControl(0, false)">
+        <iframe id="videoEmbed" src="https://www.youtube.com/embed/Fjcts89nk9E?si=AtTbbofKwqZu8b-k&rel=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </article>
+    <article class="carriageContent contentHidden contentSmall" onclick="contentControl(1, false)">
+        Oba pocházíme ze Slovenska, a tak nás přirozeně napadlo, jak tuto skutečnost začlenit do naší semestrální práce.
+        <br>Chtěli jsme totiž zahrnout něco typického pro oba. <br>Pro nás oba bylo také společné, že jsme cestovali z
+        Bratislavy do Prahy. <br>Toto cestování bylo velmi záživné a krásné, ale přineslo určité vtipné situace. <br>V
+        našem
+        videu jsme vám ukázali krásy Bratislavy a postupně jsme se přesunuli do Prahy. <br>Cesta byla nelehká a plná
+        překážek.
+        <img src="./cesta.png" height="250" style="float: left;">
+    </article>
+    <article class="carriageContent contentHidden contentSmall" onclick="contentControl(2, false)">
+        <img src="./pixabay.png" height="250">
+        <ul>
+            <li>Při natáčení snímků jsme využili mobilní telefon.</li>
+            <li> Natáčeli jsme ve voze během cesty Bratislavou a na hlavním
+                nádraží v Bratislavě.
+            <li>Letecké snímky jsme stáhli ze stránky
+                <a href="https://www.pexels.com/">Pexels</a>.
+            </li>
+            <li> Zvukové záznamy jsme také nahrávali pomocí mobilního telefonu.</li>
+            <li>Pro hudbu v pozadí jsme využili
+                <a href="https://pixabay.com/">Pixabay</a>.
+            </li>
+            <li>
+                Obrazové zdroje pro webovou stránku byly buď staženy ze stránky <a
+                    href="https://www.freepik.com/">Freepik</a>, nebo vytvořeny vlastníma
+                rukama.
+            </li>
+        </ul>
+    </article>
+    <article class="carriageContent contentHidden contentSmall" onclick="contentControl(3, false)">
+        <img src="./kdenlive.png" height="250">
+        <img src="./audacity.png" height="250">
+        <ul>
+            <li> Zpracování a úpravy zvukového záznamu jsme prováděli v programu <a
+                    href="https://www.audacityteam.org/">Audacity</a>. Zkrátili jsme nahrávky na požadovanou
+                délku, odstranili rušivý šum a upravili hlasitost.</li>
+
+            <li> Tvorbu videa jsme realizovali v programu <a href="https://kdenlive.org/">Kdenlive</a>. Importovali jsme
+                všechny
+                nahrávky a zvukové stopy a vytvořili
+                výsledné video. Využili jsme efekty přechodů a také jsme přidali titulky.</li>
+        </ul>
+
+    </article>
+    <div id="progressBar"></div>
+</body>
+
+</html>

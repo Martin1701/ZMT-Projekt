@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    z-index: -10;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #2b4a8f;
+    width: 40%;
+    left: 30%;
+    height: 6vw;
+    padding: 5px;
+    border: 4px solid black;
+    border-radius: 8px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.signHolder {
+    position: fixed;
+    height: 10px;
+    width: 40%;
+    left: 30%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.signHolder>div {
+    z-index: -5;
+    justify-content: space-between;
+    background-color: black;
+    width: 10px;
+    height: 100%;
+}
+
+header>h1 {
+    color: whitesmoke;
+    font-size: 4vw;
+    font-weight: 600;
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.headingHidden {
+    opacity: 0;
+}
+
+#progressBar {
+    z-index: 1;
+    position: absolute;
+    width: 0%;
+    background-color: rgb(52, 52, 52);
+    height: .5rem;
+    bottom: 0px;
+    transition: .5s;
+    box-sizing: content-box;
+}
+
+main {
+    z-index: -11;
+    position: absolute;
+    background-color: #dbefee;
+    box-sizing: border-box;
+    height: 80%;
+    width: 100%;
+    background-image: url('./background.jpg');
+    background-size: 400% auto;
+    background-repeat: no-repeat;
+    background-position: 100% bottom;
+    animation: moveTrees 5s linear infinite;
+    user-select: none;
+}
+
+
+@keyframes moveTrees {
+    0% {
+        background-position-x: 100%;
+        /* Start at the right edge */
+    }
+
+    100% {
+        background-position-x: 0%;
+    }
+}
+
+#railway {
+    z-index: -5;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: -1rem;
+    background: linear-gradient(to bottom, #757575, #8d8d8d);
+}
+
+/* train section */
+#train {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    transition: left 1s;
+    bottom: 0rem;
+    z-index: -2;
+}
+
+#locomotive {
+    width: 74rem;
+    height: 20rem;
+}
+
+.carriage {
+    width: 74rem;
+    height: 19rem;
+    transition: transform 0.5s ease-in-out, transform-scale 1s ease-in-out;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.carriageZIndex {
+    z-index: 0;
+}
+
+.carriageLarge {
+    transform: scale(6) translateY(10%);
+}
+
+
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-2px);
+        /* Adjust the wobble distance */
+    }
+
+    50% {
+        transform: translateY(2px);
+        /* Adjust the wobble distance */
+    }
+}
+
+/* Apply the wobbling animation when a class is added to the image */
+.wobble {
+    animation: wobble .5s infinite;
+    /* Adjust the duration of the wobble effect */
+}
+
+
+/* carriage content*/
+
+.carriageContent {
+    z-index: -2;
+    position: fixed;
+    justify-self: center;
+    width: 65%;
+    height: 80%;
+    transition: all 0.5s;
+    background-color: rgba(245, 245, 245, 0.95);
+    opacity: 1;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin-top: 3vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: 3px solid black;
+    border-radius: 50px;
+
+    font-size: 1.5rem;
+
+    overflow: hidden;
+}
+
+.carriageContent img {
+    float: right;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.carriageContent li {
+    margin-top: 20px;
+}
+
+.carriageContent h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contentSmall {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+
+.contentHidden {
+    visibility: hidden;
+}
+
+iframe {
+    position: absolute;
+    aspect-ratio: 16/9;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* map */
+#map {
+    z-index: -10;
+    position: fixed;
+    background-color: green;
+    width: 100%;
+    height: 20%;
+    /* room for tracks */
+    bottom: -1rem;
+
+}
